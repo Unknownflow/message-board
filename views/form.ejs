@@ -1,14 +1,31 @@
 <html>
-	<head></head>
+	<head>
+		<title>Message Form</title>
+		<link rel="stylesheet" href="/styles.css" />
+	</head>
 	<body>
-		<h2>Add Message</h2>
-		<a href="/">Back to homepage</a>
-		<form method="POST" action="/new">
-			<label for="messageUser">Name: </label>
-			<input id="messageUser" type="text" name="messageUser" />
-			<label for="messageText">Message: </label>
-			<input id="messageText" type="text" name="messageText" />
-			<button id="submit" type="submit">Submit</button>
-		</form>
+		<div>
+			<h1><%= title %></h1>
+			<div>
+				<form method="POST" action="/new" class="inputContainer">
+					<label for="messageUser">Name: </label>
+					<input
+						id="messageUser"
+						type="text"
+						name="messageUser"
+						required
+					/>
+					<label for="messageText">Message: </label>
+					<input
+						id="messageText"
+						type="text"
+						name="messageText"
+						required
+					/>
+					<button id="submit" type="submit">Submit</button>
+				</form>
+				<div><a class="button" href="/">Back to homepage</a></div>
+			</div>
+		</div>
 	</body>
 </html>

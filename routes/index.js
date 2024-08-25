@@ -18,7 +18,7 @@ const { Router } = require("express");
 const router = Router();
 
 router.get("/new", function (req, res) {
-	res.render("form", { title: "Mini Messageboard", messages: messages });
+	res.render("form", { title: "Add Message", messages: messages });
 	return res.end();
 });
 
@@ -34,8 +34,9 @@ router.post("/new", function (req, res) {
 });
 
 router.get("/message/:id", function (req, res) {
-	const id = req.params.id;
-	res.render("message", { message: messages[id] });
+	const message = messages[req.params.id];
+	console.log(message);
+	res.render("message", { title: "Message View", message: message });
 	return res.end();
 });
 

@@ -4,6 +4,9 @@ const path = require("node:path");
 
 const indexRouter = require("./routes/index");
 
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
+
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);

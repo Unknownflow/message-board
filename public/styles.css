@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #45a29e;
+}
+
+h1 {
+	padding: 20px;
+	text-align: center;
+}
+
+.messageContainer,
+.inputContainer {
+	display: flex;
+	width: 50vw;
+	min-height: 100px;
+	padding: 20px;
+	margin: 20px auto;
+	flex-direction: column;
+	background-color: #66fcf1;
+}
+
+.messageAuthor {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 2px;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.messageRedirect {
+	font-size: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.messageDateTime {
+	font-size: 16px;
+	color: #636353;
+	margin-bottom: 10px;
+}
+
+.messageText {
+	font-size: 20px;
+}
+
+a.button {
+	padding: 1px 6px;
+	border: 1px outset buttonborder;
+	border-radius: 3px;
+	color: buttontext;
+	background-color: buttonface;
+	text-decoration: none;
+}
+
+input {
+	margin: 10px 0;
+}

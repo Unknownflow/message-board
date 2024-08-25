@@ -1,18 +1,28 @@
 <html>
 	<head>
 		<title>Homepage</title>
+		<link rel="stylesheet" href="/styles.css" />
 	</head>
 	<body>
 		<div>
 			<h1><%= title %></h1>
-			<a href="/new">Add new message</a>
 			<% messages.map((message) => { %>
-			<p>
-				<%= message.user %> (<%= message.added.toLocaleString() %>): <%=
-				message.text %>
-			</p>
-			<a href="/message/<%= message.id %>">Open</a>
+			<div class="messageContainer">
+				<div class="messageAuthor">
+					<div><%= message.user %></div>
+					<div class="messageRedirect">
+						<a class="button" href="/message/<%= message.id %>"
+							>View message</a
+						>
+					</div>
+				</div>
+				<div class="messageDateTime">
+					(<%= message.added.toLocaleString() %>)
+				</div>
+				<div class="messageText"><%=message.text %></div>
+			</div>
 			<% }); %>
+			<div><a class="button" href="/new">Add new message</a></div>
 		</div>
 	</body>
 </html>
