@@ -35,7 +35,6 @@ router.post("/new", function (req, res) {
 
 router.get("/message/:id", function (req, res) {
 	const message = messages[req.params.id];
-	console.log(message);
 	res.render("message", { title: "Message View", message: message });
 	return res.end();
 });
